@@ -1,0 +1,43 @@
+[33mcommit 6284964b8923fd23ba5eaa6a8757732a7c903cd4[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: CtrlF4 <leew99@googlemail.com>
+Date:   Mon Jun 27 14:53:56 2022 +0100
+
+    updates to scene-5.txt to practice staging and unstaging
+
+[33mcommit c696a06bbf96f636a633b7384714e2129df1039e[m
+Author: CtrlF4 <leew99@googlemail.com>
+Date:   Mon Jun 27 14:36:20 2022 +0100
+
+    Adding scene-t .txt to the staging area ready for push
+
+[33mcommit 2cb097e30696cdc1757ea55e151059d46402b3fb[m
+Author: CtrlF4 <leew99@googlemail.com>
+Date:   Mon Jun 27 13:47:01 2022 +0100
+
+    added the text file for the codeacademy project to practice the commit and edit tasks
+
+[33mcommit 339e41b0b463dbac3aa2438f305774ca0ab89814[m
+Author: leewalkergb <leew99@googlemail.com>
+Date:   Sun Jun 26 16:33:24 2022 +0100
+
+    Added day 1 log from notion
+
+[33mcommit 3158f70c9ce0ba5a798166f794caab9669a28ce1[m
+Author: leewalkergb <leew99@googlemail.com>
+Date:   Sun Jun 26 16:21:09 2022 +0100
+
+    "Created Day 1 folder and moved screenplay.txt into the directory"
+
+[33mcommit 9a0495214a60fc000923f678e97d0244503f5ed6[m
+Author: leewalkergb <leew99@googlemail.com>
+Date:   Sun Jun 26 16:01:14 2022 +0100
+
+    Create README.md
+    
+    Added readme text
+
+[33mcommit 00a074e2b08e6d46119ba09e39750eebb3109095[m
+Author: leewalkergb <leew99@googlemail.com>
+Date:   Sun Jun 26 15:48:16 2022 +0100
+
+    First file with its changes
