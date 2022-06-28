@@ -82,4 +82,9 @@ print(order_list)
 order_list.remove("Flatbread")
 print(order_list)
 
+new_store_order_list = ["Orange", "Apple", "Mango", "Broccoli", "Mango"]
+print(new_store_order_list)
 
+#remove the duplicate
+new_store_order_list.remove("Mango")
+print(new_store_order_list)
