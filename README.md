@@ -34,4 +34,4 @@ I will aim to achieve the following within the 100 days:
 ---
 
 ## Daily Logs
-These will be added to individual dayily folders to track progress.
+These will be added to individual daily folders to track progress.
