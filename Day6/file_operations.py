@@ -2,6 +2,7 @@
 # Working with files
 #------------------------------------------------------------------------
 import csv
+import json
 
 #-----------------------------------------------------------------------------------------------------------------------------
 # Reading Files
@@ -67,7 +68,8 @@ with open('Day6\logger.csv') as cool_csv_file:
 #-----------------------------------------------------------------------------------------------------------------------------
 #A Way More Complicated example
 #-----------------------------------------------------------------------------------------------------------------------------
-with open('Day6\books.csv') as books_csv:
+# Something weird happens if the file begins with a b and doing Day6\books.csv
+with open('Day6\list_of_books.csv') as books_csv:
 # This file has an @ delimiter so we need to pass that to the DictReader() method
   books_reader = csv.DictReader(books_csv, delimiter='@')
   
@@ -78,3 +80,62 @@ with open('Day6\books.csv') as books_csv:
     isbn_list.append(rows['ISBN'])
 
 print(isbn_list)
+
+#-----------------------------------------------------------------------------------------------------------------------------
+#Writing to a .csv
+#-----------------------------------------------------------------------------------------------------------------------------
+
+# Define the data dictionary and the header dictionary
+access_log = [{'time': '08:39:37', 'limit': 844404, 'address': '1.227.124.181'}, {'time': '13:13:35', 'limit': 543871, 'address': '198.51.139.193'}, {'time': '19:40:45', 'limit': 3021, 'address': '172.1.254.208'}, {'time': '18:57:16', 'limit': 67031769, 'address': '172.58.247.219'}, {'time': '21:17:13', 'limit': 9083, 'address': '124.144.20.113'}, {'time': '23:34:17', 'limit': 65913, 'address': '203.236.149.220'}, {'time': '13:58:05', 'limit': 1541474, 'address': '192.52.206.76'}, {'time': '10:52:00', 'limit': 11465607, 'address': '104.47.149.93'}, {'time': '14:56:12', 'limit': 109, 'address': '192.31.185.7'}, {'time': '18:56:35', 'limit': 6207, 'address': '2.228.164.197'}]
+fields = ['time', 'address', 'limit']
+
+# Open the file we are making
+#! REMEMBER TO SPECIFY THE PATH
+with open('Day6\logger1.csv', 'w') as logger_csv:
+    # Set the field names remember we are now WRITING hence .DictWriter()
+    log_writer = csv.DictWriter(logger_csv, fieldnames=fields)
+
+    #write the header
+    log_writer.writeheader()
+
+    #Add the data to the csv file
+    for items in access_log:
+        log_writer.writerow(items)
+
+# Just checking if it saved
+#! REMEMBER TO SPECIFY THE PATH
+with open('Day6\logger1.csv') as logger_csv:
+    log_reader = csv.DictReader(logger_csv,delimiter=',')
+    for row in log_reader:
+        print(row)
+
+#-----------------------------------------------------------------------------------------------------------------------------
+# JSON FILES
+#-----------------------------------------------------------------------------------------------------------------------------
+
+#-----------------------------------------------------------------------------------------------------------------------------
+#Reading a JSON file
+#-----------------------------------------------------------------------------------------------------------------------------
+
+#Open the JSON file
+with open('Day6\message.json') as message_json:
+  # Notice that this is .load
+  message = json.load(message_json)
+  # We target the specific key
+  print(message['text'])
+
+
+#-----------------------------------------------------------------------------------------------------------------------------
+#Writinga JSON file
+#-----------------------------------------------------------------------------------------------------------------------------
+#Write to the JSON file
+
+# We can create the file just as we did with the .csv file
+data_payload = [
+  {'interesting message': 'What is JSON? A web application\'s little pile of secrets.',
+   'follow up': 'But enough talk!'}
+]
+
+with open('Day6\data.json', 'w') as data_json:
+  # Add the data to the json file notice that it is .dump
+  json.dump(data_payload, data_json)
