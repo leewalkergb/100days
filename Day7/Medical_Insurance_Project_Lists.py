@@ -27,4 +27,19 @@ rohan_insurance_cost = estimate_insurance_cost(name =
 # Estimate Valentina's insurance cost
 valentina_insurance_cost = estimate_insurance_cost(name = "Valentina", age = 53, sex = 0, bmi = 31.4, num_of_children = 0, smoker = 1)
 
-# Add your code here
+# Create a list for the actual insurance costs
+names = ["Maria", "Rohan", "Valentina"]
+insurance_costs = [4150.0, 5320.0, 35210.0]
+
+# Combine the above two lists using zip and convert to a list
+insurance_data = list(zip(names, insurance_costs))
+
+# Create a list for the estimated insurance costs
+estimated_insurance_data = []
+estimated_insurance_data.append(("Maria", maria_insurance_cost))
+estimated_insurance_data.append(("Rohan", rohan_insurance_cost))
+estimated_insurance_data.append(("Valentina", valentina_insurance_cost))
+
+# Print out the actual and estimated insurance costs in a nice string
+print("Here is the actual insurance cost data: ", str(insurance_data))
+print("Here is the estimated insurance cost data: ", str(estimated_insurance_data))
